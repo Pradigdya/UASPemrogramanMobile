@@ -50,26 +50,11 @@ class EventPage extends StatelessWidget {
         'status': 'Upcoming',
         'description':
             'Rapat koordinasi kegiatan organisasi mahasiswa untuk semester ini. Akan dibahas rencana kegiatan dan anggaran organisasi.',
-        'image': 'assets/images/event1.jpg',
+        'image': 'assets/images/event3.jpg',
         // Event akan datang: 3 hari dari sekarang, jam 14:00
         'date': now.add(const Duration(days: 3)).copyWith(hour: 14, minute: 0),
         'dateString': formatDate(now.add(const Duration(days: 3))),
         'time': '14:00 WIB',
-      },
-      {
-        'title': 'Workshop Flutter Development',
-        'organizer': 'HIMTI',
-        'category': 'Seminar',
-        'status': 'Finished',
-        'description':
-            'Workshop pengembangan aplikasi mobile menggunakan Flutter framework. Peserta akan belajar dari dasar hingga membuat aplikasi sederhana.',
-        'image': 'assets/images/event2.jpg',
-        // Event sudah selesai: 10 hari yang lalu, jam 10:00
-        'date': now
-            .subtract(const Duration(days: 10))
-            .copyWith(hour: 10, minute: 0),
-        'dateString': formatDate(now.subtract(const Duration(days: 10))),
-        'time': '10:00 WIB',
       },
       {
         'title': 'Hackathon 2024',
@@ -78,7 +63,7 @@ class EventPage extends StatelessWidget {
         'status': 'Finished',
         'description':
             'Hackathon 24 jam untuk menciptakan solusi inovatif menggunakan teknologi. Tim terbaik akan mendapatkan hadiah menarik.',
-        'image': 'assets/images/event1.jpg',
+        'image': 'assets/images/event4.jpg',
         // Event sudah selesai: 15 hari yang lalu, jam 08:00
         'date': now
             .subtract(const Duration(days: 15))
@@ -93,7 +78,7 @@ class EventPage extends StatelessWidget {
         'status': 'Ongoing',
         'description':
             'Kegiatan bakti sosial ke panti asuhan dan panti jompo di sekitar kampus. Akan ada berbagai kegiatan seperti donasi dan kegiatan edukatif.',
-        'image': 'assets/images/event2.jpg',
+        'image': 'assets/images/event5.jpg',
         // Event sedang berlangsung: dimulai 1 hari lalu, jam 07:00
         'date': now
             .subtract(const Duration(days: 1))

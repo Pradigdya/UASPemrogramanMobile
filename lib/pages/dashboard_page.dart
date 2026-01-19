@@ -99,20 +99,33 @@ class DashboardPage extends StatelessWidget {
               child: Stack(
                 fit: StackFit.expand,
                 children: [
-                  // Placeholder untuk gambar banner
-                  Container(
-                    color: Theme.of(
-                      context,
-                    ).colorScheme.primary.withOpacity(0.2),
-                    child: Center(
-                      child: Icon(
-                        Icons.event_note,
-                        size: 80,
-                        color: Theme.of(context).colorScheme.primary,
-                      ),
+                  // Gambar banner di belakang
+                  ClipRRect(
+                    borderRadius: const BorderRadius.only(
+                      bottomLeft: Radius.circular(20),
+                      bottomRight: Radius.circular(20),
+                    ),
+                    child: Image.asset(
+                      'assets/images/banner.jpg', // Ganti dengan nama file banner Anda
+                      fit: BoxFit.cover,
+                      errorBuilder: (context, error, stackTrace) {
+                        // Jika gambar tidak ditemukan, tampilkan placeholder
+                        return Container(
+                          color: Theme.of(
+                            context,
+                          ).colorScheme.primary.withOpacity(0.2),
+                          child: Center(
+                            child: Icon(
+                              Icons.event_note,
+                              size: 80,
+                              color: Theme.of(context).colorScheme.primary,
+                            ),
+                          ),
+                        );
+                      },
                     ),
                   ),
-                  // Overlay text
+                  // Overlay gradient untuk teks lebih jelas
                   Container(
                     decoration: BoxDecoration(
                       gradient: LinearGradient(
@@ -126,24 +139,25 @@ class DashboardPage extends StatelessWidget {
                         ],
                       ),
                     ),
-                    child: const Center(
-                      child: Padding(
-                        padding: EdgeInsets.all(16.0),
-                        child: Text(
-                          'CAMPUS EVENT &\nORGANIZATION APP',
-                          textAlign: TextAlign.center,
-                          style: TextStyle(
-                            fontSize: 24,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white,
-                            shadows: [
-                              Shadow(
-                                offset: Offset(2, 2),
-                                blurRadius: 4,
-                                color: Colors.black26,
-                              ),
-                            ],
-                          ),
+                  ),
+                  // Text di atas gambar
+                  const Center(
+                    child: Padding(
+                      padding: EdgeInsets.all(16.0),
+                      child: Text(
+                        'CAMPUS EVENT &\nORGANIZATION APP',
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          fontSize: 24,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white,
+                          shadows: [
+                            Shadow(
+                              offset: Offset(2, 2),
+                              blurRadius: 4,
+                              color: Colors.black26,
+                            ),
+                          ],
                         ),
                       ),
                     ),
