@@ -5,11 +5,16 @@ import 'package:flutter/material.dart';
 class ProfileCard extends StatelessWidget {
   final String name;
   final String nim;
+  final String imagePath; // Parameter untuk path gambar profil
 
-  const ProfileCard({super.key, required this.name, required this.nim});
+  const ProfileCard({
+    super.key,
+    required this.name,
+    required this.nim,
+    this.imagePath = 'assets/images/profile.jpg', // Default jika tidak diisi
+  });
 
   @override
-
   Widget build(BuildContext context) {
     return Card(
       // Menggunakan Card theme dari global theme
@@ -26,7 +31,7 @@ class ProfileCard extends StatelessWidget {
                   context,
                 ).colorScheme.primary.withOpacity(0.1),
                 child: Image.asset(
-                  'assets/images/profile.png',
+                  imagePath, // Menggunakan parameter imagePath
                   width: 100,
                   height: 100,
                   errorBuilder: (context, error, stackTrace) {

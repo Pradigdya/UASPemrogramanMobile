@@ -62,7 +62,6 @@ class _DetailEventPageState extends State<DetailEventPage> {
                 width: double.infinity,
                 fit: BoxFit.cover,
                 errorBuilder: (context, error, stackTrace) {
-                  // Jika gambar tidak ditemukan, tampilkan placeholder
                   return Container(
                     height: 250,
                     color: Theme.of(

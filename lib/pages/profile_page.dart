@@ -17,10 +17,20 @@ class ProfilePage extends StatelessWidget {
           children: [
             const SizedBox(height: 20),
             // Menggunakan ProfileCard reusable widget untuk pembuat 1
-            ProfileCard(name: 'Pradigdya Rafly', nim: '2313010631'),
+            ProfileCard(
+              name: 'Pradigdya Rafly',
+              nim: '2313010631',
+              imagePath:
+                  'assets/images/profile1.jpg', // Foto khusus untuk Pradigdya Rafly
+            ),
             const SizedBox(height: 20),
             // Menggunakan ProfileCard reusable widget untuk pembuat 2
-            ProfileCard(name: 'Mikhael Dava', nim: '2313010666'),
+            ProfileCard(
+              name: 'Mikhael Dava',
+              nim: '2313010650',
+              imagePath:
+                  'assets/images/profile2.jpg', // Foto khusus untuk Mikhael Dava
+            ),
             const SizedBox(height: 20),
             // Card tujuan aplikasi
             Card(
